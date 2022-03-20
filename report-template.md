@@ -4,11 +4,16 @@
 
 In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+* The purpose of this analysis is to determine the accuracy and precision of machine learning models in identifying healhty and risky loans. 
+* The financial infomration we used for the analysis was lending data located in the lending_data.csv file, which provides data for factors including: loan size, interest rate, borrower income, debt to income, # of accounts, derogatory marks and total in debt which are used in determining the "healthiness" of a loan, also indicated by the loan_status column, which our models look to predict. 
+* The variable we were trying to predict was the loan_status column, using all other columns as the features/training features. Furtheremore, we used the value_counts function to calculate the numbebr of healhty and risky loans in the given data set. 
+* Stages followed:
+  * Stage 1: Upload the data
+  * Stage 2: Separate the data into features/X (in this case everything excluding loan status) and labels/y (loan status).
+  * Stage 3: Check the balance for the label.
+  * Stage 4: Split the data into training and testing datasets by using `train_test_split` function. 
+  * Stage 5: Fit the the logistic regression model using trained Xs and ys, and then make predictions for y using the logistic_regression_model functionality. 
+* The prediction method used for both models was logitstic regression, with the differentiator being the usage of resampling for Model 2.  
 
 ## Results
 
@@ -16,16 +21,26 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
 
 * Machine Learning Model 1:
   * Description of Model 1 Accuracy, Precision, and Recall scores.
-
-
+      * Accuracy score: ~95%
+      * Precision score: 
+          * 1: 1.00 
+          * 0: 0.85
+      * Recall score: 0.99
 
 * Machine Learning Model 2:
   * Description of Model 2 Accuracy, Precision, and Recall scores.
+      * Accuracy score: ~95%
+      * Precision score:
+          * 1: 1.00 
+          * 0: 0.84
+      * Recall score: 0.99
 
 ## Summary
 
 Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
 * Which one seems to perform best? How do you know it performs best?
+    * Model 2 had a higher accuracy score, however, Model 1 had a higher precision score for predicting unhealthy loans, so my recommendation would be using Model 1. 
 * Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+    * Its more important to predict the 1s, as they are the "riskier" loans. 
 
 If you do not recommend any of the models, please justify your reasoning.
