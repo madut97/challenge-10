@@ -23,24 +23,24 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
   * Description of Model 1 Accuracy, Precision, and Recall scores.
       * Accuracy score: ~95%
       * Precision score: 
-          * 1: 1.00 
-          * 0: 0.85
+          * 0: 1.00 
+          * 1: 0.85
       * Recall score: 0.99
 
 * Machine Learning Model 2:
   * Description of Model 2 Accuracy, Precision, and Recall scores.
-      * Accuracy score: ~95%
+      * Accuracy score: ~99%
       * Precision score:
-          * 1: 1.00 
-          * 0: 0.84
+          * 0: 1.00 
+          * 1: 0.84
       * Recall score: 0.99
 
 ## Summary
 
 Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
 * Which one seems to perform best? How do you know it performs best?
-    * Model 2 had a higher accuracy score, however, Model 1 had a higher precision score for predicting unhealthy loans, so my recommendation would be using Model 1. 
+    * Given that the precision score for predicting 0's (healthy loans) is same for both Model 1 & 2, and that there is only a minor difference in precision for predicting 1's (risky loans) is minor, both the higher accuracy score and higher recall score makes Model 2 the better performer, in my opinion. 
 * Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-    * Its more important to predict the 1s, as they are the "riskier" loans. 
+    * Given that the aim of this model is identifying risky loans, predictig 1`s is more important. 
 
 If you do not recommend any of the models, please justify your reasoning.
